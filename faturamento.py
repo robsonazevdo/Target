@@ -14,16 +14,15 @@ with open('dados.json', 'r') as Dados_json:
 
 
 def menor():
-    menor = 0
+    menor = 100000.0000
    
     for i in range(0, len(dados)):
 
         if dados[i]['valor'] != 0:
-            menor = dados[i]['valor']
+            if dados[i]['valor'] < menor:
+                menor = dados[i]['valor']
 
     return menor
-
-
 
 
 
